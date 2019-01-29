@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* 清除默认样式 */
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
+input {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* 清除默认样式 end */
+/* 下拉框公用样式 */
+select.none {
+  display: none; }
+
+.select {
+  width: 200px;
+  height: 30px;
+  line-height: 30px; }
+  .select .selecter {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 #aaaaaa;
+    color: #aaaaaa\9;
+    cursor: pointer;
+
+    padding-right: 15%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+
+    background-color: #ffffff;
+    background-position: 95% center;
+    -moz-background-size: auto 30%;
+    -o-background-size: auto 30%;
+    -webkit-background-size: auto 30%;
+    background-size: auto 30%;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/blackdown.png");
+    
+    position: relative;
+    z-index: 100; }
+    .select .selecter span {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      width: 100%;
+      height: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+  .select .selecter[disabled] {
+    background: #efefef; }
+    .select .selecter[disabled]:focus {
+      border-color: #cccccc; }
+
+.optionBox {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  border: 1px solid purple;
+  width: 120%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  background-color: #ffffff;
+  z-index: 200;
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+ }
+  .optionBox .option {
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+    color: #aaaaaa;
+    cursor: pointer;
+    background-color: #ffffff; }
+    .optionBox .option:hover {
+      background-color: purple;
+      color: #ffffff; }
+.optionBox .option[selected] {
+    background: orange;
+    color: #ffffff;
+}
+
+/* 下拉列表显示隐藏 */
+.optionBox.showOptions {
+  top: 100%;
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1; }
+
+.selecter:focus {
+  background-image: url("../imgs/blackup.png");
+  border: 1px solid purple;
+  border-bottom: none; }
+
+.optionBox.hideOptions {
+  display: none; }
+
+/* 下拉框公用样式 end */
+/* 下拉框单选 */
+.singleSelect .optionBox .option[data-selected="true"] {
+  background-color: #f4657e;
+  color: #ffffff; }
+
+/* 下拉框单选 end */
+/* 下拉框多选 */
+.multiSelect .optionBox .option {
+  position: relative;
+  padding-right: 20%; }
+
+.checkbx {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  margin-top: -7.5px;
+  *margin-top: -12px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border: 1px solid #cccccc;
+  float: right; }
+  .checkbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    width: 100%;
+    height: 100%; }
+  .checkbx input[type='checkbox'] {
+    float: left;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* 下拉框多选 end */

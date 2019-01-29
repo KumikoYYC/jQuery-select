@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0; 
+}
+body {
+    background: #eceff6;
+    padding: 10px;
+}
+select.customSelect {
+  display: none; 
+}
+
+.select {
+  width: 300px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-right: 150px;
+  margin-top: 100px; 
+}

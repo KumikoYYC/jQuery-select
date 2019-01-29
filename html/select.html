@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉框</title>
+    
+    <link rel="stylesheet" href="../stylesheets/select.css" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+</head>
+<body>
+
+    <select id="select1" class="customSelect" multiple="true" onchange="testChange(this)" onclick="testClick(this)" >
+        <option value="1" selected data-selected>Volvo</option>
+        <option value="2">Saab</option>
+        <option value="3" selected data-selected>Opel</option>
+        <option value="4" selected data-selected>Audi</option>
+        <option value="5">Saab5</option>
+        <option value="6">Saab6</option>
+        <option value="7">Saab7</option>
+        <option value="8">Saab8</option>
+        <option value="9">Saab9</option>
+        <option value="10">Saab10</option>
+        <option value="11">Saab11</option>
+        <option value="12">Saab12</option>
+        <option value="13">Saab13</option>
+        <option value="14">Saab14</option>
+        <option value="15">Saab15</option>
+        <option value="16">Saab16</option>
+        <option value="17">Saab17</option>
+        <option value="18">Saab18</option>
+        <option value="19">Saab19</option>
+        <option value="20">Saab20</option>
+    </select>
+
+    <select id="select2" class="customSelect" onchange="testChange(this)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected data-selected="selected">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+    </select>
+
+    <div style="margin-top: 100px;margin-bottom: 20px;">获取下拉框选中值得唯一标识：</div>
+    <div>
+        <button type="button" onclick="getFirst()">第一个</button>
+        <span id="first"></span>
+    </div>
+    <div>
+        <button type="button" onclick="getSecond()">第二个</button>
+        <span id="second"></span>
+    </div>
+
+    <div style="margin-top: 100px;margin-bottom: 20px;">动态改变select的选项值</div>
+    <div>
+        <button type="button" onclick="changeOptions()">第二个</button>
+    </div>
+
+    <div style="margin-top: 100px;margin-bottom: 20px;">重置数据</div>
+    <div>
+        <button type="button" onclick="empty()">置空</button>
+    </div>
+    <div>
+        <button type="button" onclick="resetFirst()">重置第一个的值</button>
+    </div>
+    <div>
+        <button type="button" onclick="resetSecond()">重置第二个的值</button>
+    </div>
+
+    <!-- 解决 ie6、7、8 下，JSON相关操作的兼容问题 -->
+    <script src="../js/json2.js"></script>  
+    
+    <!-- <script src="../js/jquery-1.9.1.js"></script> -->
+    <script src="../js/jquery-1.12.4.js"></script>
+    <!-- <script src="../js/jquery.fix.clone.js"></script> -->
+    <!-- <script src="../js/select.1.js"></script> -->
+    <script src="../js/jquery.select.js"></script>
+    <script src="../js/index.js"></script>
+
+</body>
+</html>
