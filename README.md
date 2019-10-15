@@ -3,9 +3,9 @@
 2. `$(".customSelect").select();`,生成下拉框，第一次生成下拉框时调用。<br>
 4. `getUniq()`，获取下拉框所选项的唯一标识，方便与后台进行交互。<br>
 5. 通过`selected data-selected`属性设置初始选中的选项值，单选下拉框只能设置一个选项为`selected data-selected`。<br>
-因为我是通过复制`<selec>`来生成新的选项列表，ie低版本获取不到`selected`属性，所以增加一个`data-selected`。<br>
+因为我是通过复制`<select>`来生成新的选项列表，ie低版本获取不到`selected`属性，所以增加一个`data-selected`。<br>
 6. 重新生成（刷新）下拉框，调用`newSelect()`。注意：调用该方法的前提是该对象已调用过`select()`。<br>
-7. 改变多选下拉框复选框的图标，在调用`select()`时，传入`checkboxImg`对象。<br>
+7. 设置或新增属性，改变多选下拉框复选框的图标，在调用`select()`时，传入`checkboxImg`对象。<br>
 ```
 // 设置选项属性
 $(".customSelect").select({
