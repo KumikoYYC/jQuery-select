@@ -9,7 +9,7 @@
 
 - `newSelect()`
 
-重新生成（刷新）下拉框，调用`$(".customSelect").newSelect()`。注意：实例对象才能调该方法该对象已调用过`select()`。
+重新生成（刷新）下拉框，调用`$(".customSelect").newSelect()`。注意：实例对象才能调该方法（该对象已调用过`select()`）。
 
 #### 事件
 - `multiChange`
