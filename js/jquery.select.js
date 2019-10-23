@@ -1,5 +1,5 @@
 
-(function($) {
+(function($, undefined) {
 
     var instCount = 0, // 下拉框 id 值拼接
     	allOptions = {}, 
@@ -84,9 +84,8 @@
                 $(document).on("click", ".optionBox input[type='checkbox']", function(event) {
                     var isChecked =  $(this).prop("checked");
                     var $checkboxWraper = $(this).parent(".checkbx");
-                    toggleChecked($checkboxWraper, isChecked);
-                    
-                    var _id = $(this).parents(".optionBox").attr("id").split("-")[1];
+		    var _id = $(this).parents(".optionBox").attr("id").split("-")[1];
+                    toggleChecked($checkboxWraper, isChecked, _id);
                     var $valueBox = $cur_selecter;
                     handleValue($valueBox, $checkboxWraper, isChecked);
             
@@ -185,8 +184,8 @@
             $option.attr("selected","selected");  
             $option.attr("data-selected","selected"); 
             $(el).children("img").attr("src", allOptions.checkboxImg.selected);
-            $selectOption.attr("selected", "selected");
-            $selectOption.attr("data-selected", "selected");
+            $selectOption.prop("selected", "selected");
+            $selectOption.prop("data-selected", "selected");
         } else {
             $(el).children("img").attr("src", allOptions.checkboxImg.defaut);
             $option.removeAttr("selected data-selected");
