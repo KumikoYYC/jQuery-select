@@ -10,7 +10,13 @@
 
 - 重新生成（刷新）下拉框，调用`newSelect()`。注意：调用该方法的前提是该对象已调用过`select()`。
 
-- 设置或新增属性，改变多选下拉框复选框的图标，在调用`select()`时，传入`checkboxImg`对象。
+- 新增属性。
+```
+// 设置选项属性
+var newOption = {};
+$(".customSelect").select(newOption);
+```
+- 改变多选下拉框复选框的图标，在调用`select()`时，传入`checkboxImg`对象。
 ```
 // 设置选项属性
 $(".customSelect").select({
